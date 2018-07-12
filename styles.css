@@ -1,0 +1,171 @@
+html, body {
+    height: 100%;
+    /*background-color: #fff1ea;*/
+    background-color: #ffffff;
+}
+
+body {
+    margin-top: 4.75rem;
+}
+
+img {
+    width: 60%;
+    max-width: 60%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: sail, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #d4ad36 !important;
+}
+
+h4, h5, h6 {
+    font-family: merriweather, serif;
+    font-style: normal;
+    font-weight: 900;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+    p img {
+        margin: 0 auto;
+    }
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: #eaeaea;
+}
+    .break hr {
+        margin: 0;
+    }
+
+.red {
+    color: #ec594e !important;
+}
+
+.has-small-margin-after {
+    margin-bottom: .75rem !important;
+}
+
+.has-margin-after {
+    margin-bottom: 2rem !important;
+}
+
+.has-no-margin-after {
+    margin-bottom: 0 !important;
+}
+
+.is-vertically-centered {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.is-round {
+    border-radius: 50%;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.navbar {
+    border-bottom: 1px solid #e8e8e8;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    -moz-transition: -moz-transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+    .navbar.hidden {
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    .navbar #site-title {
+        font-family: merriweather, serif;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: #d4ad36 !important;
+    }
+    .navbar .navbar-item {
+        padding: 1.5rem;
+        font-size: 1.1rem;
+    }
+    .navbar .navbar-burger {
+        position: fixed;
+        top: .8rem;
+        right: 0;
+    }
+
+#intro {
+    position: relative;
+    background: url('https://assets.bpwalters.com/images/wardwalterswedding/us.jpg');
+    background-size: cover;
+    background-position: center;
+}
+    #intro .hero-body {
+        z-index: 2;
+    }
+    #intro .hero-filter {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000000;
+        opacity: .4;
+        z-index: 1;
+    }
+
+#stories-tabs, #party-tabs {
+    margin: 0;
+}
+    #stories-tabs ul, #party-tabs ul {
+        margin: 0;
+    }
+        #stories-tabs ul li, #party-tabs ul li {
+            margin-top: 0;
+        }
+            #stories-tabs ul li a, #party-tabs ul li a {
+                border: 0;
+                border-radius: 0;
+                background-color: transparent;
+                font-size: 2rem;
+                font-family: merriweather, serif;
+                font-weight: 900;
+                opacity: .3;
+                color: #363636;
+            }
+                #stories-tabs ul li.is-active a, #party-tabs ul li.is-active a {
+                    opacity: 1.0;
+                }
+
+#stories-content, #party-content {
+    padding: 1.5rem 0;
+}
+    #stories-content > div, #party-content > div {
+        display: none;
+    }
+        #stories-content > div.is-active, #party-content > div.is-active {
+            display: block;
+        }
+        #stories-content img, #party-content img {
+            margin: 0 auto;
+        }
+
+#picture-collage img {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 769px) {
+    img {
+        width: 90%;
+        max-width: 90%;
+    }
+}
