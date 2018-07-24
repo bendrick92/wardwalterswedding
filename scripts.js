@@ -3,13 +3,25 @@ $(document).ready(function () {
 
     $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
-        if (scrollTop > 0) {
-            $('.navbar').toggleClass('hidden', scrollTop > prevScroll);
+        var navbarHeight = $('.navbar').height();
+        var windowWidth = $(window).width();
+
+        if (windowWidth > 1087 && scrollTop > navbarHeight && scrollTop > prevScroll) {
+            hideNav();
         }
         else {
-            $('.navbar').removeClass('hidden');
+            showNav();
         }
+
         prevScroll = scrollTop;
+    });
+
+    $(window).on('resize', function () {
+        var windowWidth = $(window).width();
+
+        if (windowWidth <= 1087) {
+            showNav();
+        }
     });
 
     $('.navbar a').on('click', function (e) {
@@ -57,4 +69,12 @@ $(document).ready(function () {
             event.strftime('%D days %H:%M:%S')
         );
     });
+
+    function showNav() {
+        $('.navbar').removeClass('hidden');
+    }
+
+    function hideNav() {
+        $('.navbar').addClass('hidden');
+    }
 });
