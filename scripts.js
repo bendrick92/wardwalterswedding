@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    loadJukebox();
+
     var prevScroll;
 
     $(window).on('scroll', function () {
@@ -70,11 +72,102 @@ $(document).ready(function () {
         );
     });
 
+    $('#jukebox-form').on('submit', function (e) {
+        e.preventDefault();
+
+        $(this).validate();
+
+        if ($(this).valid()) {
+            var json = JSON.stringify({
+                'SubmitterName': $('#submitterName').val(),
+                'SongName': $('#songName').val(),
+                'ArtistName': $('#artistName').val(),
+                'Recaptcha': $('#g-recaptcha-response').val()
+            });
+
+            console.log(json);
+
+            $.ajax({
+                url: 'https://localhost:5001/api/Suggestion',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                data: json,
+                success: function (result) {
+                    addToJukebox(result);
+                    
+                    showJukeboxSuccess();
+                },
+                error: function (xhr, response, text) {
+                    console.log(xhr, response, text);
+
+                    showJukeboxError();
+                }
+            });
+        }
+    });
+
     function showNav() {
         $('.navbar').removeClass('hidden');
     }
 
     function hideNav() {
         $('.navbar').addClass('hidden');
+    }
+
+    function showJukeboxSuccess() {
+        var jukeboxStatus = $('#jukebox-status');
+        jukeboxStatus.attr('class', '');
+        jukeboxStatus.attr('class', 'notification is-success');
+        jukeboxStatus.text('Song added successfully!');
+        jukeboxStatus.slideDown();
+
+        setTimeout(function () {
+            jukeboxStatus.slideUp();
+        }, 3000);
+    }
+
+    function showJukeboxError() {
+        var jukeboxStatus = $('#jukebox-status');
+        jukeboxStatus.attr('class', '');
+        jukeboxStatus.attr('class', 'notification is-danger');
+        jukeboxStatus.text('An error occurred - please try again!');
+        jukeboxStatus.slideDown();
+
+        setTimeout(function () {
+            jukeboxStatus.slideUp();
+        }, 3000);
+    }
+
+    function loadJukebox() {
+        var jukeboxTable = $('#jukebox-table');
+
+        $.ajax({
+            url: 'https://localhost:5001/api/Suggestion',
+            type: 'GET',
+            success: function (result) {
+                $.each(result, function (i, v) {
+                    addToJukebox(v);
+                });
+            },
+            error: function (xhr, response, text) {
+                console.log(xhr, response, text);
+            }
+        });
+    }
+
+    function addToJukebox(suggestion) {
+        var jukeboxTable = $('#jukebox-table');
+
+        var submitter = suggestion.submitterName;
+        var song = suggestion.songName;
+        var artist = suggestion.artistName;
+
+        var jukeboxItem = $('<tr></tr>');
+        jukeboxItem.append('<td>' + song + '</td>');
+        jukeboxItem.append('<td>' + artist + '</td>');
+        jukeboxItem.append('<td>' + submitter + '</td>');
+        
+        jukeboxTable.find('tbody').append(jukeboxItem);
     }
 });

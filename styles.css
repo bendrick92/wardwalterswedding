@@ -168,6 +168,17 @@ hr {
     max-width: 100%;
 }
 
+.g-recaptcha {
+    margin: 2rem 0;
+}
+    .g-recaptcha > div {
+        width: auto !important;
+    }
+        .g-recaptcha > div > div {
+            margin: 0 auto !important;
+            text-align: center;
+        }
+
 @media only screen and (max-width: 769px) {
     img {
         width: 90%;

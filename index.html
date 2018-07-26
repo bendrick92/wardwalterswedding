@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -233,8 +234,69 @@
             <h4 class="subtitle is-4 is-italic has-text-centered">Coming Soon!</h4>
         </div>
     </section>
+    <section class="break">
+        <div class="container">
+            <hr>
+        </div>
+    </section>
+    <section id="jukebox" class="section is-medium">
+        <div class="container">
+            <h2 class="title is-2 has-text-centered">Jukebox</h2>
+            <p class="is-size-5 has-text-centered is-italic">Get your groove on!</p>
+            <p class="has-text-centered">Help us build our wedding playlist - check out what others have suggested and share your own ideas below!</p>
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <table id="jukebox-table" class="table is-bordered is-fullwidth has-margin-after">
+                        <thead>
+                            <tr>
+                                <th>Song</th>
+                                <th>Artist</th>
+                                <th>Submitted By</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <h4 class="title is-3 has-text-centered">Add a Song</h4>
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <div id="jukebox-status"></div>
+                    <form id="jukebox-form">
+                        <div class="field">
+                            <label class="label">Your Name</label>
+                            <div class="control">
+                                <input class="input" type="text" id="submitterName" placeholder="John Smith" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Song Name</label>
+                            <div class="control">
+                                <input class="input" type="text" id="songName" placeholder="Uptown Funk" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Artist Name</label>
+                            <div class="control">
+                                <input class="input" type="text" id="artistName" placeholder="Bruno Mars" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="g-recaptcha" data-sitekey="6LcCbGYUAAAAAMOLxmBYNmwtL3sBKEW4gYi30Tv2" required></div>
+                        </div>
+                        <div class="field">
+                            <div class="control has-text-centered">
+                                <button class="button is-link">Submit Song</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script type="text/javascript" src="jquery.countdown.min.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
 </html>
