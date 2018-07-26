@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    var apiEndpoint = 'https://wardwalterswedding.com/api/Suggestion';
+    //var apiEndpoint = 'http://localhost';
+
     loadJukebox();
 
     var prevScroll;
@@ -88,7 +91,7 @@ $(document).ready(function () {
             console.log(json);
 
             $.ajax({
-                url: 'https://localhost:5001/api/Suggestion',
+                url: apiEndpoint,
                 type: 'POST',
                 dataType: 'json',
                 contentType: 'application/json; charset=utf-8',
@@ -143,7 +146,7 @@ $(document).ready(function () {
         var jukeboxTable = $('#jukebox-table');
 
         $.ajax({
-            url: 'https://localhost:5001/api/Suggestion',
+            url: apiEndpoint,
             type: 'GET',
             success: function (result) {
                 $.each(result, function (i, v) {
