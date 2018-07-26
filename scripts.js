@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var apiEndpoint = 'https:///jukebox-api.azurewebsites.net/api/Suggestion';
+    var apiEndpoint = 'https://jukebox-api.azurewebsites.net/api/Suggestion';
     //var apiEndpoint = 'http://localhost';
 
     loadJukebox();
