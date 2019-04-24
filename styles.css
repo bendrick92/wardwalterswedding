@@ -184,4 +184,13 @@ hr {
         width: 90%;
         max-width: 90%;
     }
+
+    #stories-tabs ul li a, #party-tabs ul li a {
+        font-size: 1.2rem;
+    }
+
+    #party-content img {
+        width: 55%;
+        max-width: 55%;
+    }
 }

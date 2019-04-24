@@ -57,7 +57,7 @@ $(document).ready(function () {
         $(this).addClass('is-active');
 
         $('#stories-content div').removeClass('is-active');
-        $('div[data-content="' + tab + '"]').addClass('is-active');
+        $('#stories-content div[data-content="' + tab + '"]').addClass('is-active');
     });
 
     $('#party-tabs li').on('click', function () {
@@ -66,7 +66,7 @@ $(document).ready(function () {
         $('#party-tabs li').removeClass('is-active');
         $(this).addClass('is-active');
         $('#party-content div').removeClass('is-active');
-        $('div[data-content="' + tab + '"]').addClass('is-active');
+        $('#party-content div[data-content="' + tab + '"]').addClass('is-active');
     });
 
     $('#countdown').countdown("05/10/2020", function(event) {
