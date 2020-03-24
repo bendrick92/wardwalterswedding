@@ -30,17 +30,8 @@
                     <a class="navbar-item" data-anchor="our-story" href="#our-story">
                         Our Story
                     </a>
-                    <a class="navbar-item" data-anchor="the-wedding" href="#the-wedding">
-                        Wedding Day
-                    </a>
                     <a class="navbar-item" data-anchor="the-wedding-party" href="#the-wedding-party">
                         Wedding Party
-                    </a>
-                    <a class="navbar-item" data-anchor="accommodations" href="#accommodations">
-                        Accommodations
-                    </a>
-                    <a class="navbar-item" data-anchor="subscribe" href="#subscribe">
-                        Subscribe
                     </a>
                     <a class="navbar-item" data-anchor="jukebox" href="#jukebox">
                         Jukebox
@@ -53,10 +44,50 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1">Ali &amp; Ben</h1>
-                <h4 id="countdown" class="subtitle is-3"></h2>
+                <!--<h4 id="countdown" class="subtitle is-3"></h2>-->
             </div>
         </div>
         <div class="hero-filter"></div>
+    </section>
+    <section id="an-update" class="section is-medium">
+        <div class="container content">
+            <h2 class="title is-2 has-text-centered">A Change of Plans</h2>
+            <p>Wedding guests,</p>
+            <p>First of all, we want to thank each and every one of you for the love and support we’ve received. We hope this message finds you all safe and in good health!</p>
+            <p>As you are most certainly already aware, the escalating situation the last few weeks has created a great deal of uncertainty and upended most everything in our daily lives. Unfortunately, our wedding has been no exception.</p>
+            <p>We’ve made the difficult decision to cancel our wedding plans for Punta Cana. After weeks of back and forth and countless long nights, we feel that it’s best option for everyone’s health and safety.</p>
+            <p>As things play out in the coming weeks and months, Ali and I will be evaluating our options and putting together a revised plan for our wedding. At this time, we can’t firm up any dates or location(s), but we want to make sure we have everyone’s contact information for when we are able to make a decision. Please fill out the form below to provide us with the best email to contact you at.</p>
+            <p>In the meantime, we advise everyone who made travel arrangements with Lisa Jean to reach out to her directly for information on refunds and cancellations. Her contact information is also listed below.</p>
+            <p>Finally, we want to thank everyone again for reaching out and helping keep our spirits up during this difficult time. It has been truly humbling to have the support of so many loving friends and family.</p>
+            <p>Love,</p>
+            <p>Ali & Ben</p>
+        </div>
+        <div class="container content">
+            <div class="columns is-centered">
+                <div class="column is-4">
+                    <div class="notification is-danger" id="subscribe-error" style="display:none"></div>
+                    <div class="notification is-success" id="subscribe-success" style="display:none"></div>
+                    <form method="POST" action="https://formspree.io/xgezpllw" id="subscribe-form">
+                        <div class="field">
+                            <label class="label">Email Address</label>
+                            <div class="control">
+                                <input class="input" type="text" class="input" name="email" id="subscribe-email" placeholder="contact@wardwalterswedding.com" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control has-text-centered">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button is-link" value="Subscribe">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="break">
+        <div class="container">
+            <hr>
+        </div>
     </section>
     <section id="our-story" class="section is-medium">
         <div class="container content">
@@ -111,43 +142,6 @@
     <section class="break">
         <div class="container">
             <hr>
-        </div>
-    </section>
-    <section id="the-wedding" class="section is-medium">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">Wedding Day</h2>
-            <div class="has-text-centered has-margin-after">
-                <h4 class="title is-5 has-small-margin-after">Sunday, May 10, 2020</h4>
-                <h4 class="title is-6 has-small-margin-after">5:30 PM</h4>
-                <p>Attire: Beach Formal</p>
-            </div>
-            <p>
-                <img src="https://assets.bpwalters.com/images/wardwalterswedding/jellyfish.jpg">
-            </p>
-            <h4 class="title is-spaced is-3 has-text-centered">Ceremony &amp; Reception</h4>
-            <h4 class="subtitle is-4 has-text-centered is-italic has-small-margin-after">Jellyfish Restaurant</h4>
-            <p class="has-text-centered has-margin-after">Punta Cana, Dominican Republic</p>
-        </div>
-    </section>
-    <section class="break">
-        <div class="container">
-            <hr>
-        </div>
-    </section>
-    <section id="accommodations" class="section is-medium">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">Accommodations</h2>
-            <div class="has-text-centered has-margin-after">
-                <h4 class="title is-5 has-small-margin-after">Now Larimar Punta Cana</h4>
-            </div>
-            <p>
-                <img src="https://assets.bpwalters.com/images/wardwalterswedding/now_larimar.jpg">
-            </p>
-            <p class="has-text-centered">In order to create a smooth travel experience for everyone, our travel agent, Lisa, will be coordinating all guest travel and lodging accommodations at the best group rate available.</p>
-            <p class="has-text-centered has-text-weight-bold">Upon RSVP, please contact:</p>
-            <h4 class="subtitle is-4 has-text-centered is-italic has-small-margin-after">Lisa Jean</h4>
-            <p class="has-text-centered has-small-margin-after"><a href="mailto:lisajean@thetravelgallerywi.com">lisajean@thetravelgallerywi.com</a></p>
-            <p class="has-text-centered">(414) 778-1300</p>
         </div>
     </section>
     <section class="break">
@@ -254,84 +248,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="break">
-        <div class="container">
-            <hr>
-        </div>
-    </section>
-    <section id="subscribe" class="section is-medium">
-        <div class="container">
-            <h2 class="title is-2 has-text-centered">Subscribe</h2>
-            <p class="is-size-5 has-text-centered is-italic">Let us keep you posted with the latest wedding news and updates!</p>
-            <div class="columns is-centered">
-                <div class="column is-5">
-                    <div class="notification is-danger" id="mce-error-response" style="display:none"></div>
-                    <div class="notification is-success" id="mce-success-response" style="display:none"></div>
-                    <form action="https://wardwalterswedding.us18.list-manage.com/subscribe/post?u=b0a62c0ae798c064f15feb244&amp;id=268f9fae80" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div class="field">
-                            <label class="label">Email Address</label>
-                            <div class="control">
-                                <input class="input" type="email" name="EMAIL" id="mce-EMAIL" placeholder="contact@wardwalterswedding.com" required>
-                            </div>
-                        </div>
-                        <div class="field is-horizontal">
-                            <div class="field-body">
-                                <div class="field">
-                                    <label class="label">First Name</label>
-                                    <div class="control">
-                                        <input class="input" type="text" name="FNAME" id="mce-FNAME" placeholder="John" required>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <label class="label">Last Name</label>
-                                    <div class="control">
-                                        <input class="input" type="text" name="LNAME" id="mce-LNAME" placeholder="Smith" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Address</label>
-                            <div class="control">
-                                <input class="input" type="text" id="mce-ADDRESS-addr1" name="ADDRESS[addr1]" placeholder="1234 Test Street" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Address Line 2</label>
-                            <div class="control">
-                                <input class="input" type="text" id="mce-ADDRESS-addr2" name="ADDRESS[addr2]" placeholder="Apt 123">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">City</label>
-                            <div class="control">
-                                <input class="input" type="text" id="mce-ADDRESS-city" name="ADDRESS[city]" placeholder="West Allis" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">State</label>
-                            <div class="control">
-                                <input class="input" type="text" id="mce-ADDRESS-state" name="ADDRESS[state]" placeholder="Wisconsin" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Zip Code</label>
-                            <div class="control">
-                                <input class="input" type="text" id="mce-ADDRESS-zip" name="ADDRESS[zip]" placeholder="53214" required>
-                            </div>
-                        </div>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_b0a62c0ae798c064f15feb244_268f9fae80" tabindex="-1" value=""></div>
-                        <div class="field">
-                            <div class="control has-text-centered">
-                                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button is-link" value="Subscribe">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         </div>
     </section>
     <section class="break">
